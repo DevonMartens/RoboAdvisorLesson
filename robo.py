@@ -22,7 +22,9 @@ context.bought = False
 
 #if statement checking if bought- if not runs a for loop that 
 if not context.bought:
+#using a for loop to go over the stocks we have
         for stock in context.stocks:
+          # calculating amount  
             amount = (context.target_allocation[stock] *
                       context.portfolio.cash) / data.current(stock,’price’)
             if (amount != 0):
